@@ -39,9 +39,18 @@ const  myEmailFunction=()=> {
  }
  
 
-emailbtn.addEventListener("click", myEmailFunction);
-phonebtn.addEventListener("click", myPhoneFunction);
-agebtn.addEventListener("click", myAgeFunction);
+emailbtn.addEventListener("click", (event)=>{
+	event.preventDefault()
+	myEmailFunction();
+} );
+phonebtn.addEventListener("click",(event)=>{
+	event.preventDefault()
+	myPhoneFunction();
+} );
+agebtn.addEventListener("click",(event)=>{
+	event.preventDefault()
+	myAgeFunction();
+} ); 
 
 document.getElementById('img').innerHTML=html;
 })
